@@ -74,7 +74,7 @@ var myMapData = [
   ]
 
   //display the map marker in the basemap
-  var map = L.map('myMap').setView([40.8488, -73.7797], 10);
+  var map = L.map('myMap', {scrollWheelZoom: false}).setView([40.8488, -73.7797], 10);
   map.addLayer(layer)
 
 myMapData.forEach(function(element) {
