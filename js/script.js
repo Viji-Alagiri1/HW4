@@ -41,54 +41,56 @@ $('#back').click( function() {
     updateEverything(myNumber)
 });
 
-  // initialize basemap layer
   var basemapUrl = 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png';
   var attribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>';
 
-  //var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
-  //  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-  //});
-
-var myMapData = [
-    {
-      name: "Bronx",
-      coord: [40.8488, -73.8997]
-    },
-    {
-      name: "Manhattan",
-      coord: [40.7503,-73.9802]
-    },
-    {
-      name: "Staten Island",
-      coord: [40.5897, -74.1321]
-    },
-    {
-      name: "Brooklyn",
-      coord: [40.6462,-73.9328]
-    },
-    {
-      name: "Queens",
-      coord: [40.7269, -73.7797]
-    },
-   
-  ]
-
-  //Initialize the basemap
-  var myMap = L.map('myMap'),{
+  //initialize map1
+  var map1 = L.map('map1', {
     scrollWheelZoom: false
-  }).setView([40.8488, -73.7797], 10);
+  }).setView( [40.706913,-73.987513], 5);
 
-//CartoDB Basemap attribution
-L.tileLayer(basemapUrl, {
-  attribution: attribution
-}).addTo(myMap);
+  //CartoDB Basemap
+  L.tileLayer(basemapUrl,{
+    attribution: attribution
+  }).addTo(map1);
 
-myMapData.forEach(function(element) {
-    var marker = L.marker(element.coord).addTo(myMap);
-    marker.bindPopup("You are looking at " + element.name)
+  //load external geojson
+  $.getJSON('data/cities.geojson', function(data) {
+    console.log(data);
+
+    //define two different styles
+    var lived_style = {
+      radius: 10,
+      fillColor: "#3366ff",
+      color: "#FFF",
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0.8
+    };
+
+    var not_lived_style = {
+      radius: 10,
+      fillColor: "#ff3300",
+      color: "#FFF",
+      weight: 2,
+      opacity: 1,
+      fillOpacity: 0.8
+    };
+
+    L.geoJson(data, 
+    {
+      //calling L.geoJson with pointToLayer as an option will automatically add markers to the map from our data
+      pointToLayer: function (feature, latlng) {
+
+          console.log(feature);
+          if(feature.properties.chris_lived_here == "true") {
+            return L.circleMarker(latlng, lived_style);
+       
+          } else {
+            return L.circleMarker(latlng, not_lived_style);
+          }
+      }
+    }
+    ).addTo(map1);
+
   });
-  
-  var panOptions = {
-    animate: true,
-    duration: 2
-  }
