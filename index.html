@@ -4,38 +4,73 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Interactive Web Mapping - Class 4 Examples</title>
-  <meta name="description" content="The HTML5 Herald">
+  <title>New York City</title>
+  <meta name="author" content="VijiAlagiri">
   <meta name="author" content="SitePoint">
-
-  <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
-
+  <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet' href='http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css' />
+    
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-   <link rel="stylesheet" href="css/styles.css" />
+
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 
 </head>
 
 <body>
-  <h1>Map 1 - External Home-grown GeoJSON with CircleMarkers</h1>
-  <div id="map1" class="map"></div>
+<div id='myFirstDiv'>
+<!--homework title Assignment 3 submitted February 21-->
+<h4><center>Assignment 3</center></h4>
+ 
+  <h2><center>Around New York City</center></h2>
 
-  <h1>Map 2 - NYC Neighborhood Tabulation Areas</h1>
-  <div id="map2" class="map"></div>
+  <p>New York has diverse culture and vibrant place to live. There is always something for everyone in the City and there are no limitations for the range of activities available within the city and the suburbs.</p>
 
-  <h1>Map 3 - Rebuilding the Leaflet Choropleth Demo</h1>
-  <div id="map3" class="map"></div>
-  <div id="infoWindow"></div>
+  <div>
+    <center>
+    <h3>NYC Borough Map</h3>
+    <ul><img src='http://nycmap360.com/carte/image/en/nyc-borough-map.png'></ul>
+    </center>
+  </div>
+
+<p><h3><center>New York is surrounded by many water bodies</center></h3>
+<center>Click the buttons to view the stunning view of the rivers around the five boroughs!</center></p>
+
+<!-- on-click display the images of the rivers -->
+<center>
+  <div id=show>
+    <button id='back'>&lt;</button>
+    &nbsp;&nbsp;
+    <img id='riverImage' src = 'http://www.citylandnyc.org/wp-content/uploads/sites/14/2011/03/EastRiver-regular.jpg'>  
+    <button id='forward'>&gt;</button>
+  </div>
+
+  <div id='count'>
+    <span id="myNumber">1</span>/4
+    <br>
+    <span id="riverName">East River</span>
+  </div>
   
-  <h1>Map 4 - Custom Marker Icons</h1>
-  <div id="map4" class="map"></div>
+  <h3><center>This is my Base Map</center></h4>
+
+<div id="myMap"></div>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+  
+<!-- initialize Google Map layer-->
+<p></p>
+<h3><center>This is Google Map</center></h4>
+
+<div id="googleMap" style="width:75%;height:380px;"></div>
+
+<!-- source jquery code -->
+<script src="js/jquery.js"></script>
+<script src="js/script.js"></script>
+</center>
+ 
 
 
-
-  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <script src="js/script.js"></script>
 </body>
 </html>
