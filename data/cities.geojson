@@ -4,9 +4,6 @@
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#c60000",
-        "marker-size": "medium",
-        "marker-symbol": "star-stroked"
         "name": "New York",
         "chris_lived_here": "true"
       },
