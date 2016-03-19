@@ -42,26 +42,26 @@ $('#back').click( function() {
 });
 
   // initialize basemap layer
-  var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-    });
+  var basemapUrl = 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png';
+  var attribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>';
+
+  //var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
+  //  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+  //});
 
 var myMapData = [
     {
       name: "Bronx",
       coord: [40.8488, -73.8997]
     },
-
     {
       name: "Manhattan",
       coord: [40.7503,-73.9802]
     },
-
     {
       name: "Staten Island",
       coord: [40.5897, -74.1321]
     },
-
     {
       name: "Brooklyn",
       coord: [40.6462,-73.9328]
@@ -73,14 +73,18 @@ var myMapData = [
    
   ]
 
-  //display the map marker in the basemap
-  var map = L.map('myMap'),{
+  //Initialize the basemap
+  var myMap = L.map('myMap'),{
     scrollWheelZoom: false
   }).setView([40.8488, -73.7797], 10);
-  map.addLayer(layer)
+
+//CartoDB Basemap attribution
+L.tileLayer(basemapUrl, {
+  attribution: attribution
+}).addTo(myMap);
 
 myMapData.forEach(function(element) {
-    var marker = L.marker(element.coord).addTo(map);
+    var marker = L.marker(element.coord).addTo(myMap);
     marker.bindPopup("You are looking at " + element.name)
   });
   
@@ -88,32 +92,3 @@ myMapData.forEach(function(element) {
     animate: true,
     duration: 2
   }
-
-//google map intialization and display
-
-var myCenter=new google.maps.LatLng(51.508742,-0.120850);
-
-function initialize()
-{
-var mapProp = {
-  center:myCenter,
-  zoom:5,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker=new google.maps.Marker({
-  position:myCenter,
-  });
-
-marker.setMap(map);
-
-var infowindow = new google.maps.InfoWindow({
-  content:"Hello England!"
-  });
-
-infowindow.open(map,marker);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
