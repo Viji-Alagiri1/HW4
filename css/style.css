@@ -72,3 +72,21 @@ button {
   height: 500px; 
   background-color: cream;
 }
+
+.map {
+      width: 100%;
+      height: 500px;
+      background-color: gray;
+    }
+
+    #infoWindow {
+      background: #FFFFFF;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 30px;
+      position: relative;
+      top: -78px;
+      width: auto;
+      display: inline;
+      margin-left: 20px;
+    }
