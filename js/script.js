@@ -53,3 +53,40 @@ $('#back').click( function() {
   L.tileLayer(basemapUrl,{
     attribution: attribution
   }).addTo(map1);
+
+var myMapData = [
+    {
+      name: "Bronx",
+      coord: [40.8488, -73.8997]
+    },
+
+    {
+      name: "Manhattan",
+      coord: [40.7503,-73.9802]
+    },
+
+    {
+      name: "Staten Island",
+      coord: [40.5897, -74.1321]
+    },
+
+    {
+      name: "Brooklyn",
+      coord: [40.6462,-73.9328]
+    },
+    {
+      name: "Queens",
+      coord: [40.7269, -73.7797]
+    },
+   
+  ]
+
+myMapData.forEach(function(element) {
+    var marker = L.marker(element.coord).addTo(map1);
+    marker.bindPopup("You are looking at " + element.name)
+  });
+  
+  var panOptions = {
+    animate: true,
+    duration: 2
+  }

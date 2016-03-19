@@ -74,12 +74,12 @@ button {
 }
 
 .map {
-      width: 100%;
+      width: 90%;
       height: 500px;
-      background-color: gray;
+      background-color: cream;
     }
 
-    #infoWindow {
+#infoWindow {
       background: #FFFFFF;
       padding: 15px;
       border-radius: 10px;
