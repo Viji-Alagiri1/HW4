@@ -43,5 +43,35 @@
         ]
       }
     }
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#c60000",
+        "marker-size": "medium",
+        "marker-symbol": "star-stroked"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.046875,
+          14.604847155053898
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#ce6700",
+        "marker-size": "medium",
+        "marker-symbol": "triangle-stroked"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.1796875,
+          40.44694705960048
+        ]
+      }
+    }
   ]
 }

@@ -72,3 +72,16 @@ button {
   height: 500px; 
   background-color: cream;
 }
+
+ #infoWindow {
+      background: #FFFFFF;
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 30px;
+      position: relative;
+      top: -78px;
+      width: auto;
+      display: inline;
+      margin-left: 20px;
+    }
+
