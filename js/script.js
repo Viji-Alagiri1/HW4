@@ -89,8 +89,10 @@ var myMapData = [
   //initialize map2
   var map2 = L.map('map2', {
     scrollWheelZoom: false
-  }).setView( [37.002553,-94.372559], 5);
+  }).setView( [34.107256,-91.977539], 5);
 
+//37.002553,-94.372559 (US map display)
+//34.107256,-91.977539
   //CartoDB Basemap
   L.tileLayer(basemapUrl,{
     attribution: attribution
@@ -146,7 +148,7 @@ var myMapData = [
             return L.marker(latlng, {icon: parkIcon})
               .bindPopup('I had lots of fun in this ' + feature.properties.name  + ' amusement park.');
           }
-          //mountains that I drove on
+          //mountains that I climbed on
           else if(feature.properties.mountains == "true") {
             return L.marker(latlng, {icon: mountainsIcon})
               .bindPopup('I climbed this ' + feature.properties.name  + ' mountain.');
