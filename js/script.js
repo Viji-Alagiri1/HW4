@@ -142,21 +142,7 @@ var myMapData = [
             return L.marker(latlng, {icon: riverIcon})
               .bindPopup('I visited a beautiful river in ' + feature.properties.name);
           } 
-          //parks that visited and had fun
-          else if(feature.properties.park == "true") {
-            return L.marker(latlng, {icon: parkIcon})
-              .bindPopup('I had lots of fun in this ' + feature.properties.name  + ' amusement park.');
-          } 
-          //mountains that I drove on
-          else if(feature.properties.mountains == "true") {
-            return L.marker(latlng, {icon: mountainsIcon})
-              .bindPopup('I had lots of fin in this ' + feature.properties.name  + ' amusement park.');
-          } 
-          //simply the places I visited for vacations
-          else if(feature.properties.visited == "true") {
-            return L.marker(latlng, {icon: visitedIcon})
-              .bindPopup('I had good memories of visiting this ' + feature.properties.name  + ' place for vacation.');
-          } 
+          //removed all the else if statements
           //places that I plan on visiting in future: "My Future Road Trips"
           else {
             return L.marker(latlng, {icon: futureIcon})
