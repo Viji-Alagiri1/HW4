@@ -130,6 +130,34 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Washington",
+        "visited": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.151489,
+          38.818311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maine",
+        "visited": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.285278,
+          45.471688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Arizona",
         "park": "false",
         "visited": "false"
