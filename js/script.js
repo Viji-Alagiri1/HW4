@@ -84,9 +84,9 @@ $('#back').click( function() {
 
           console.log(feature);
           if(feature.properties.chris_lived_here == "true") {
-            return L.marker(latlng, lived_style);
+            return L.marker(latlng);
             } else {
-            return L.circleMarker(latlng, not_lived_style);
+            return L.marker(latlng);
           }
       }
     }
