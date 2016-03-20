@@ -32,6 +32,20 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Alabama",
+        "river": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.212463,
+          32.386920
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "New York",
         "park": "true"
       },
@@ -40,6 +54,20 @@
         "coordinates": [
           -73.921509,
           41.100052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Jersey",
+        "park": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.312897,
+          40.158935
         ]
       }
     },
@@ -60,14 +88,29 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Washington",
+        "name": "Houston",
+        "visited": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.484924,
+          29.790601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arizona",
+        "river": "false",
         "park": "false"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -77.080078125,
-          38.89958342598271
+          -111.404114,
+          34.250406
         ]
       }
     }
