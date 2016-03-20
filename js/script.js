@@ -152,7 +152,7 @@ var myMapData = [
           //places that I plan on visiting in future: "My Future Road Trips"
           else {
             return L.marker(latlng, {icon: futureIcon})
-            .bindPopup('I plan on visiting ' + feature.properties.name);;
+            .bindPopup('I plan on visiting ' + feature.properties.name);
           }
       }
     }
