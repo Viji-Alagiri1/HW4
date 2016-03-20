@@ -141,14 +141,11 @@ var myMapData = [
           if(feature.properties.river == "true") {
             return L.marker(latlng, {icon: riverIcon})
               .bindPopup('I visited a beautiful river in ' + feature.properties.name);
-          } 
-          //parks that visited and had fun
-
-          else if(feature.properties.park == "true") {
-            return L.marker(latlng, {icon: parkIcon})
-              .bindPopup('I had lots of fun in this ' + feature.properties.name  + ' amusement park.');
-          
-          //removed all the else if statements
+          } //parks that visited and had fun
+          //else if(feature.properties.park == "true") {
+            //return L.marker(latlng, {icon: parkIcon})
+              //.bindPopup('I had lots of fun in this ' + feature.properties.name  + ' amusement park.');
+           //removed all the else if statements
           //places that I plan on visiting in future: "My Future Road Trips"
           else {
             return L.marker(latlng, {icon: futureIcon})
