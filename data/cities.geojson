@@ -18,6 +18,34 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "charleston",
+        "river": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.947510,
+          32.793047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alabama",
+        "river": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.212463,
+          32.386920
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "New York",
         "park": "true"
       },
