@@ -155,7 +155,7 @@ var myMapData = [
           //simply the places I visited for vacations
           else if(feature.properties.visited == "true") {
             return L.marker(latlng, {icon: visitedIcon})
-              .bindPopup('I had good memories of visiting this ' + <b>feature.properties.name</b>  + ' place for vacation.');
+              .bindPopup('I had good memories of visiting this ' + feature.properties.name  + ' place for vacation.');
           } 
           //places that I plan on visiting in future: "My Future Road Trips"
           else {
