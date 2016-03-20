@@ -143,7 +143,7 @@ var myMapData = [
               .bindPopup('I visited a beautiful river in ' + feature.properties.name);
           } 
           //parks that visited and had fun
-          else if(feature.properties.park == "true") {
+          if(feature.properties.park == "true") {
             return L.marker(latlng, {icon: parkIcon})
               .bindPopup('I had lots of fun in this ' + feature.properties.name  + ' amusement park.');
           //removed all the else if statements
