@@ -149,17 +149,17 @@ var myMapData = [
           //mountains that I drove on
           else if(feature.properties.mountains == "true") {
             return L.marker(latlng, {icon: mountainsIcon})
-              .bindPopup('I had lots of fin in this ' + feature.properties.name  + ' amusement park.');
+              .bindPopup('I climbed this ' + feature.properties.name  + ' amusement park.');
           } 
           //simply the places I visited for vacations
           else if(feature.properties.visited == "true") {
             return L.marker(latlng, {icon: visitedIcon})
-              .bindPopup('I had good memories of visiting this ' + feature.properties.name  + ' place for vacation.');
+              .bindPopup('I had good memories of visiting ' + <b>feature.properties.name</b>  + ' on recent vacation.');
           } 
           //places that I plan on visiting in future: "My Future Road Trips"
           else {
             return L.marker(latlng, {icon: futureIcon})
-            .bindPopup('I plan on visiting ' + feature.properties.name);;
+            .bindPopup('I plan on visiting ' + feature.properties.name + ' in furture vacation.');;
           }
       }
     }
