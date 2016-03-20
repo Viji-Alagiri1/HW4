@@ -103,7 +103,6 @@
       "type": "Feature",
       "properties": {
         "name": "Arizona",
-        "river": "false",
         "park": "false"
       },
       "geometry": {
