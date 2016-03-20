@@ -42,7 +42,6 @@ $('#back').click( function() {
 
  
   var basemapUrl = 'http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png';
-  //var basemapUrl = 'http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
   var attribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>';
 
   //initialize map1
@@ -95,25 +94,6 @@ $('#back').click( function() {
     ).addTo(map1);
 });
 
-    //update the text in the infowindow with whatever was in the data
-    console.log(layer.feature.properties.name);
-    $('#infoWindow').text(layer.feature.properties.name);
-  }
-
-  //this runs on mouseout
-  function resetHighlight(e) {
-    geojson.resetStyle(e.target);
-  }
-
-  //this is executed once for each feature in the data, and adds listeners
-  function onEachFeature(feature, layer) {
-    layer.on({
-        mouseover: mouseoverFunction,
-        mouseout: resetHighlight
-        //click: zoomToFeature
-    });
-  }
-
   //initialize map4
   var map4 = L.map('map4', {
     scrollWheelZoom: false
@@ -157,5 +137,5 @@ $('#back').click( function() {
     }
     ).addTo(map4);
 
-  })
+  });
  
