@@ -130,7 +130,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Washington",
+        "name": "Washington D.C",
         "visited": "true"
       },
       "geometry": {
@@ -167,6 +167,111 @@
         "coordinates": [
           -111.404114,
           34.250406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salt Lake City, Utah",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.489014,
+          41.137296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Las Vegas",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.532471,
+          36.217687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SantaFe",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.790344,
+          35.699686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chicago",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.638184,
+          41.787697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Denver",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.336670,
+          39.985538
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St. Louis",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.879150,
+          38.848264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Orleans",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.266418,
+          29.957314
         ]
       }
     }
