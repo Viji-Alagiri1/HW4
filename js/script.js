@@ -57,7 +57,7 @@ $('#back').click( function() {
   //initialize map2
   var map2 = L.map('map2', {
     scrollWheelZoom: false
-  }).setView( [43.036767,-122.651367], 8);
+  }).setView( [37.840157,-100.217285], 8);
 
   //CartoDB Basemap
   L.tileLayer(basemapUrl,{
