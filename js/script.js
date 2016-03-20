@@ -116,6 +116,11 @@ var myMapData = [
       iconSize:     [37, 37], // size of the icon
       iconAnchor:   [16, 37] // point of the icon which will correspond to marker's location
     });
+    var futureIcon = L.icon({
+      iconUrl: 'img/palm.png',
+      iconSize:     [37, 37], // size of the icon
+      iconAnchor:   [16, 37] // point of the icon which will correspond to marker's location
+    });
 
     L.geoJson(data, 
     {
@@ -123,13 +128,18 @@ var myMapData = [
       pointToLayer: function (feature, latlng) {
 
           console.log(feature);
-
-          if(feature.properties.chris_lived_here == "true") {
+          //places I visited
+          if(feature.properties.river == "true") {
             return L.marker(latlng, {icon: riverIcon})
               .bindPopup('I visited a beautiful river in ' + feature.properties.name);
-          } else {
+          } 
+          else if(feature.properties.park == "true") {
             return L.marker(latlng, {icon: parkIcon})
-            .bindPopup('I had lots of fun in this ' + feature.properties.name + 'amusement park.');;
+              .bindPopup('I had lots of fin in this ' + feature.properties.name  + ' amusement park.');
+          } //My Future Road Trips
+          else {
+            return L.marker(latlng, {icon: futureIcon})
+            .bindPopup('I plan on visiting this ' + feature.properties.name);;
           }
       }
     }
