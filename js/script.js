@@ -147,10 +147,10 @@ var myMapData = [
               .bindPopup('I had lots of fun in this ' + feature.properties.name  + ' amusement park.');
           }
           //mountains that I drove on
-          else if(feature.properties.mountains == "true") {
-            return L.marker(latlng, {icon: mountainsIcon})
-              .bindPopup('I climbed this ' + feature.properties.name  + ' mountain.');
-          } 
+         // else if(feature.properties.mountains == "true") {
+           // return L.marker(latlng, {icon: mountainsIcon})
+             // .bindPopup('I climbed this ' + feature.properties.name  + ' mountain.');
+          //} 
           //simply the places I visited for vacations
           else if(feature.properties.visited == "true") {
             return L.marker(latlng, {icon: visitedIcon})
