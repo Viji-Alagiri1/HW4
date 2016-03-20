@@ -102,8 +102,8 @@ var myMapData = [
   $.getJSON('data/cities.geojson', function(data) {
     console.log(data);
 
-    displaylegend: true;
-    
+    //displaylegend: true;
+
     //icon to point river location
     var riverIcon = L.icon({
       iconUrl: 'img/river.png',
