@@ -100,13 +100,19 @@ var myMapData = [
   $.getJSON('data/cities.geojson', function(data) {
     console.log(data);
 
-    var burgerIcon = L.icon({
-      iconUrl: 'img/burger.png',
+    var riverIcon = L.icon({
+      iconUrl: 'img/river.png',
       iconSize:     [37, 37], // size of the icon
       iconAnchor:   [16, 37] // point of the icon which will correspond to marker's location
     });
-    var lawnMowerIcon = L.icon({
-      iconUrl: 'img/lawnmower.png',
+    var parkIcon = L.icon({
+      iconUrl: 'img/ferriswheel.png',
+      iconSize:     [37, 37], // size of the icon
+      iconAnchor:   [16, 37] // point of the icon which will correspond to marker's location
+    });
+
+    var mountainsIcon = L.icon({
+      iconUrl: 'img/mountains.png',
       iconSize:     [37, 37], // size of the icon
       iconAnchor:   [16, 37] // point of the icon which will correspond to marker's location
     });
@@ -119,17 +125,15 @@ var myMapData = [
           console.log(feature);
 
           if(feature.properties.chris_lived_here == "true") {
-            return L.marker(latlng, {icon: burgerIcon})
-              .bindPopup('Chris has lived in ' + feature.properties.name);
+            return L.marker(latlng, {icon: riverIcon})
+              .bindPopup('I visited a beautiful river in: ' + feature.properties.name);
           } else {
-            return L.marker(latlng, {icon: lawnMowerIcon})
-            .bindPopup('Chris has not lived in ' + feature.properties.name);;
+            return L.marker(latlng, {icon: parkIcon})
+            .bindPopup('I had fun in this: ' + feature.properties.name);;
           }
       }
     }
     ).addTo(map2);
 
-
-
-  })
+})
  
