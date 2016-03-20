@@ -84,7 +84,7 @@ $('#back').click( function() {
 
           console.log(feature);
           if(feature.properties.chris_lived_here == "true") {
-            return L.circleMarker(latlng, lived_style);
+            return L.Marker(latlng, lived_style);
             } else {
             return L.circleMarker(latlng, not_lived_style);
           }
