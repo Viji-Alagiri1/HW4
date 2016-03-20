@@ -53,46 +53,7 @@ $('#back').click( function() {
     attribution: attribution
   }).addTo(map1);
 
-  //load external geojson
-  //sample code completed during the class by Chris
-  $.getJSON('data/cities.geojson', function(data) {
-    console.log(data);
-
-    //define two different styles
-    var lived_style = {
-      radius: 10,
-      fillColor: "#3366ff",
-      color: "#FFF",
-      weight: 2,
-      opacity: 1,
-      fillOpacity: 0.8
-    };
-
-    var not_lived_style = {
-      radius: 10,
-      fillColor: "#ff3300",
-      color: "#FFF",
-      weight: 2,
-      opacity: 1,
-      fillOpacity: 0.8
-    };
-
-    L.geoJson(data, 
-    {
-      //calling L.geoJson with pointToLayer as an option will automatically add markers to the map from our data
-      pointToLayer: function (feature, latlng) {
-
-          console.log(feature);
-          if(feature.properties.chris_lived_here == "true") {
-            return L.marker(latlng);
-            } else {
-            return L.marker(latlng);
-          }
-      }
-    }
-    ).addTo(map1);
-});
-
+ 
   //initialize map2
   var map2 = L.map('map2', {
     scrollWheelZoom: false
