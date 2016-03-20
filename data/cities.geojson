@@ -144,14 +144,14 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Maine",
+        "name": "Hershey's Choclate Factory",
         "visited": "true"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -69.285278,
-          45.471688
+          -76.305542,
+          40.041809
         ]
       }
     },
