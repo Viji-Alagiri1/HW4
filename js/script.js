@@ -93,15 +93,15 @@ $('#back').click( function() {
     ).addTo(map1);
 });
 
-  //initialize map4
-  var map4 = L.map('map4', {
+  //initialize map2
+  var map2 = L.map('map2', {
     scrollWheelZoom: false
   }).setView( [40.706913,-73.987513], 5);
 
   //CartoDB Basemap
   L.tileLayer(basemapUrl,{
     attribution: attribution
-  }).addTo(map4);
+  }).addTo(map2);
 
   //load external geojson
   $.getJSON('data/cities.geojson', function(data) {
@@ -134,7 +134,7 @@ $('#back').click( function() {
           }
       }
     }
-    ).addTo(map4);
+    ).addTo(map2);
 
 
 
