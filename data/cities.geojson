@@ -89,7 +89,8 @@
       "type": "Feature",
       "properties": {
         "name": "Arizona",
-        "park": "false"
+        "park": "false",
+        "visited": "false"
       },
       "geometry": {
         "type": "Point",
