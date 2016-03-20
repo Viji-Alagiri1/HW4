@@ -56,6 +56,7 @@ $('#back').click( function() {
   }).addTo(map1);
 
   //load external geojson
+  //sample code completed during the class by Chris
   $.getJSON('data/cities.geojson', function(data) {
     console.log(data);
 
@@ -94,3 +95,67 @@ $('#back').click( function() {
     ).addTo(map1);
 });
 
+    //update the text in the infowindow with whatever was in the data
+    console.log(layer.feature.properties.name);
+    $('#infoWindow').text(layer.feature.properties.name);
+  }
+
+  //this runs on mouseout
+  function resetHighlight(e) {
+    geojson.resetStyle(e.target);
+  }
+
+  //this is executed once for each feature in the data, and adds listeners
+  function onEachFeature(feature, layer) {
+    layer.on({
+        mouseover: mouseoverFunction,
+        mouseout: resetHighlight
+        //click: zoomToFeature
+    });
+  }
+
+  //initialize map4
+  var map4 = L.map('map4', {
+    scrollWheelZoom: false
+  }).setView( [40.706913,-73.987513], 5);
+
+  //CartoDB Basemap
+  L.tileLayer(basemapUrl,{
+    attribution: attribution
+  }).addTo(map4);
+
+  //load external geojson
+  $.getJSON('data/cities.geojson', function(data) {
+    console.log(data);
+
+    var burgerIcon = L.icon({
+      iconUrl: 'img/burger.png',
+      iconSize:     [37, 37], // size of the icon
+      iconAnchor:   [16, 37] // point of the icon which will correspond to marker's location
+    });
+    var lawnMowerIcon = L.icon({
+      iconUrl: 'img/lawnmower.png',
+      iconSize:     [37, 37], // size of the icon
+      iconAnchor:   [16, 37] // point of the icon which will correspond to marker's location
+    });
+
+    L.geoJson(data, 
+    {
+      //calling L.geoJson with pointToLayer as an option will automatically add markers to the map from our data
+      pointToLayer: function (feature, latlng) {
+
+          console.log(feature);
+
+          if(feature.properties.chris_lived_here == "true") {
+            return L.marker(latlng, {icon: burgerIcon})
+              .bindPopup('Chris has lived in ' + feature.properties.name);
+          } else {
+            return L.marker(latlng, {icon: lawnMowerIcon})
+            .bindPopup('Chris has not lived in ' + feature.properties.name);;
+          }
+      }
+    }
+    ).addTo(map4);
+
+  })
+ 
