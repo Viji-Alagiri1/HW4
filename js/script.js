@@ -92,7 +92,7 @@ var myMapData = [
   }).setView( [34.107256,-91.977539], 5);
 
 //37.002553,-94.372559 (US map display)
-//34.107256,-91.977539
+//34.107256,-91.977539 (new coordinates displays well)
   //CartoDB Basemap
   L.tileLayer(basemapUrl,{
     attribution: attribution
