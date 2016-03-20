@@ -60,6 +60,20 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "New Hampshire",
+        "mountains": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.504517,
+          43.687736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Houston",
         "visited": "true"
       },
