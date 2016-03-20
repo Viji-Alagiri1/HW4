@@ -18,7 +18,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "charleston",
+        "name": "Charleston",
         "river": "true"
       },
       "geometry": {
@@ -54,6 +54,34 @@
         "coordinates": [
           -73.921509,
           41.100052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Jersey",
+        "park": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.312897,
+          40.158935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orlando",
+        "park": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.936279,
+          28.623104
         ]
       }
     },
