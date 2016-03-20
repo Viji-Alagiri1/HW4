@@ -89,10 +89,10 @@ var myMapData = [
   //initialize map2
   var map2 = L.map('map2', {
     scrollWheelZoom: false
-  }).setView( [34.107256,-91.977539], 5);
+  }).setView( [37.317752,-89.516602], 5);
 
 //37.002553,-94.372559 (US map display)
-//34.107256,-91.977539 (new coordinates displays well)
+//37.317752,-89.516602(new coordinates displays well) 
   //CartoDB Basemap
   L.tileLayer(basemapUrl,{
     attribution: attribution
