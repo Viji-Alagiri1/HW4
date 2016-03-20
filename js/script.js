@@ -126,10 +126,10 @@ var myMapData = [
 
           if(feature.properties.chris_lived_here == "true") {
             return L.marker(latlng, {icon: riverIcon})
-              .bindPopup('I visited a beautiful river in: ' + feature.properties.name);
+              .bindPopup('I visited a beautiful river in ' + feature.properties.name);
           } else {
             return L.marker(latlng, {icon: parkIcon})
-            .bindPopup('I had fun in this: ' + feature.properties.name);;
+            .bindPopup('I had lots of fun in this ' + feature.properties.name + 'amusement park.');;
           }
       }
     }
