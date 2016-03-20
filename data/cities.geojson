@@ -102,6 +102,20 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Upstate New York",
+        "mountains": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.792419,
+          43.163119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Houston",
         "visited": "true"
       },
