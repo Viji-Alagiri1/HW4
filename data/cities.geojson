@@ -1,0 +1,279 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Savannah",
+        "river": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.111031,
+          32.083884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Charleston",
+        "river": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.947510,
+          32.793047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alabama",
+        "river": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.212463,
+          32.386920
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New York",
+        "park": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.921509,
+          41.100052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Jersey",
+        "park": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.312897,
+          40.158935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orlando",
+        "park": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.936279,
+          28.623104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Hampshire",
+        "mountains": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.504517,
+          43.687736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Upstate New York",
+        "mountains": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.792419,
+          43.163119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Houston",
+        "visited": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -95.484924,
+          29.790601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Washington D.C",
+        "visited": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.151489,
+          38.818311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hershey's Choclate Factory",
+        "visited": "true"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.305542,
+          40.041809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arizona",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.404114,
+          34.250406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salt Lake City, Utah",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -112.489014,
+          41.137296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Las Vegas",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.532471,
+          36.217687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "SantaFe",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.790344,
+          35.699686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chicago",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.638184,
+          41.787697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Denver",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.336670,
+          39.985538
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St. Louis",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.879150,
+          38.848264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Orleans",
+        "park": "false",
+        "visited": "false"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.266418,
+          29.957314
+        ]
+      }
+    }
+  ]
+}
