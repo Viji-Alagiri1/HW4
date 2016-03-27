@@ -12,14 +12,15 @@
   background-color: cream;
 }
 
-footer{
-    width:100%;
-    min-height:100px;    
-    background-color: #f0f8ff; /* This color gets inverted color or you can add navbar inverse class in html */
-}
 img {
   height: 500px;
   width: 500px;
 }
 
+.check
+{
+  opacity:0.5;
+  color:#996;
+  
+}
 
